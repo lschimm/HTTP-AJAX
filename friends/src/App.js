@@ -3,21 +3,29 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import FriendsList from './component/FriendsList';
+import FriendForm from './component/FriendForm';
+import { timingSafeEqual } from 'crypto';
 
 class App extends React.Component {
 
   constructor() {
     super();
     this.state = {
-      friends: []
+      friends: [],
+      name: "",
+      age: "",
+      email: ""
     };
   }
+
   render() {
     return (
       <div className="App">
-        <h2>Soon...</h2>
+        <h1>Friends List</h1>
         <FriendsList 
         />
+        <h2>Friend Form List</h2>
+        <FriendForm />
       </div>
     );
   }
